@@ -39,7 +39,7 @@ def data():
     if result[0] == 2:
         iris_value = "VERGINICA"
 
-    return iris_value    
+    return render_template("iris.html", PREDICT_VALUE=iris_value)    
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host=CONFIG.HOST_NAME, port = CONFIG.PORT_NUMBER)
